@@ -1,7 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { MovieCard } from '../MovieCard/MovieCard';
 import './MovieList.scss';
+import { MovieCard } from '../MovieCard';
 
 export const MovieList = ({ movies }) => (
   <div className="movies">
@@ -10,11 +8,3 @@ export const MovieList = ({ movies }) => (
     ))}
   </div>
 );
-
-MovieList.propTypes = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      imdbId: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};
